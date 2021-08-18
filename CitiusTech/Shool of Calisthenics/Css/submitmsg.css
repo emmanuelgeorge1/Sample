@@ -1,0 +1,13 @@
+.responsive {
+    width: 450px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+a {
+    font-family: "Nunito", sans-serif;
+    font-weight: 600PX;
+    color: black;
+    margin-left: 763PX;
+    transition: 0.3s;
+  }

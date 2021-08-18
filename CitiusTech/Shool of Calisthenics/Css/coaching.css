@@ -1,0 +1,167 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: #454545;
+  font-family: "Nunito", sans-serif;
+}
+a {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  color: #faf8f4;
+  transition: 0.3s;
+}
+nav {
+  background-color: black;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 8px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 25px 0 black;
+}
+nav * {
+  display: inline;
+}
+nav li {
+  margin: 30px;
+}
+.column {
+  float: left;
+  width: 27%;
+  padding: 0px 20px 0px 60px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  margin-bottom: 50px;
+}
+.container {
+  margin-top: 150px;
+  padding: 10px 20px 10px 20px;
+}
+
+.footer .footer-contact,
+.footer .footer-link,
+.footer .footer-newsletter {
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  margin-left: 150px;
+  margin-right: 10px;
+  color: #454545;
+}
+.footer .footer-contact h2,
+.footer .footer-link h2,
+.footer .footer-newsletter h2 {
+  position: relative;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  font-size: 22px;
+  color: #17171a;
+}
+.footer .footer-contact h2::after,
+.footer .footer-link h2::after,
+.footer .footer-newsletter h2::after {
+  position: absolute;
+  content: "";
+  width: 45px;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: teal;
+}
+.footer .footer-link a {
+  display: block;
+  margin-bottom: 10px;
+  color: #17171a;
+  transition: 0.3s;
+}
+.footer .footer-link a::before {
+  position: relative;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 10px;
+  color: black;
+}
+.footer .footer-link a:hover {
+  color: black;
+  letter-spacing: 1px;
+}
+
+.footer .footer-contact p i {
+  width: 25px;
+  color: black;
+}
+.footer .footer-newsletter input {
+  height: 27px;
+  background: transparent;
+  border: 1px solid #17171a;
+  border-radius: 5px;
+}
+.footer .footer-newsletter .btn {
+  background-color: #17171a;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+.columnFooter {
+  float: left;
+  width: 27.33333%;
+  padding: 10px;
+  height: 300px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: seashell;
+  background-color: rgb(15, 15, 15);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+.card button:hover {
+  opacity: 0.7;
+}
+.c-column {
+  float: left;
+  width: 18%;
+  padding: 0px 20px 0px 70px;
+}
+.c-row:after {
+  content: "";
+  display: table;
+  clear: both;
+  margin-bottom: 50x;
+}

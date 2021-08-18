@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <Head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <Title>School Of Calisthenics</Title>
+    <link rel="stylesheet" type="text/css" href="Css/home.css" />
+  </Head>
+  <Body>
+    <nav>
+      <ul>
+        <li>
+          <a href="#home"> HOME </a>
+        </li>
+        <li>
+          <a href="Coaching.html">COACHING </a>
+        </li>
+        <li><a href="#about"> CONTACT US </a></li>
+        <li>
+          <a href="registration.html">REGISTRATION</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="home">
+      <div class="container">
+        <div class="row">
+          <div class="column">
+            <h1><b>WHAT IS CALISTHENICS?</b></h1>
+            <h4>
+              Calisthenics is a form of physical training focused on teaching
+              you to master your own bodyweight using minimal equipment.
+            </h4>
+            <h5>
+              The word comes from the Greek, Kalos and Sthenos meaning ‘Beauty’
+              and ‘Strength’. It is the art and science of beautiful movement.
+            </h5>
+
+            <p>
+              The School of Calisthenics was established to help anyone start,or
+              continue their bodyweight training journey. Whether you want to
+              learn to handstand, human flag or muscle up, or you want to
+              explore the most natural form of physical training so you can do a
+              workout anytime, anywhere, we have got everything you need.
+              Calisthenics is the complete package. Body and mind working
+              together to the perfect symphony of mobility, stability, strength
+              and play. Here is some information about the benefits of exploring
+              your potential through bodyweight training.
+            </p>
+            <p>
+              Calisthenics is the complete package. Body and mind working
+              together to the perfect symphony of mobility, stability, st rength
+              and play. Here is some information about the benefits of exploring
+              your potential through bodyweight training.
+            </p>
+          </div>
+          <div class="column">
+            <img src="Images/cali.jpg" alt="CALISTHENICS?" class="responsive" />
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="column">
+            <h1><b>PHYSICAL HEALTH</b></h1>
+            <p>
+              Bodyweight training represents exercise in its most natural form
+              and combines strength training and basic gymnastic movements that
+              can be done anywhere.
+            </p>
+            <p>
+              It’s true that there is beauty in simplicity and calisthenics has
+              been tried and tested over millennia leaving no doubt that it
+              delivers exceptional results in all facets; movement, strength and
+              aesthetics. Whilst the latter is a consideration at the School of
+              Calisthenics we encourage people to focus on what your body can do
+              rather than just what it looks like.
+            </p>
+            <p>
+              The great thing about progressive bodyweight training is that with
+              consistent training at an appropriate intensity, the two come
+              together. You get a box full of gravity defying movement skills
+              and, an athletic physique.
+            </p>
+            <p>
+              To be successful in calisthenics you must learn to use the body as
+              an integrated unit instead of individual and isolated muscles.
+              This is good news as exposing yourself to exercises that require
+              you to transfer force from hands to feet means a huge potential
+              return when it comes to functional movement and robustness.
+              Calisthenics will serve you well now, and into the latter years of
+              your life.
+            </p>
+          </div>
+          <div class="column">
+            <img src="Images/body.jpg" alt="PHYSICAL" class="responsive" />
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="column">
+            <h1><b>MENTAL HEALTH</b></h1>
+            <p>
+              Research shows that setting and achieving goals, learning new
+              things, being resilient and having a community to be part of can
+              help make you happier. Calisthenics creates the opportunity to do
+              all these things.
+            </p>
+
+            <p>
+              Because the focus changes to what your body can do, instead of
+              just what it looks like, issues with body image and dysmorphia can
+              be reduced. Calisthenics also promotes mindfulness through a need
+              to be present in your practice, particuarly in the skill
+              acquisition phase of learning a new movement.
+            </p>
+
+            <p>
+              Calisthenics is about more than just getting strong and taking
+              cool photos. Your brain is a muscle that needs flexing as well and
+              training it with progressively challenging movements is a great
+              way to keep it sharp.
+            </p>
+          </div>
+          <div class="column">
+            <img src="Images/mind.jpg" alt="MENTAL" class="responsive" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <video controls poster="Images/new.jpg">
+        <source src="videos/calis.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <hr>
+    <div id="about">
+      <div class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="columnFooter">
+              <div class="footer-contact">
+                <h2>Our Address</h2>
+                <p>📍 85 Street, Kerala, INDIA</p>
+                <p>☎ +91 92 345 67890</p>
+                <p>&#9993 info@Calisthenics.com</p>
+              </div>
+            </div>
+            <div class="columnFooter">
+              <div class="footer-link">
+                <h2>Quick Links</h2>
+                <a href="">&#9874 Privacy policy</a>
+                <a href="">&#9874 Cookies</a>
+                <a href="">&#9874 Help</a>
+                <a href="">&#9874 FQAs</a>
+              </div>
+            </div>
+            <div class="columnFooter">
+              <div class="footer-newsletter">
+                <h2>Newsletter</h2>
+                <p>
+                  Send us your valuable feedback
+                </p>
+                <form name="myform" method="POST">
+                  <input type="text" id="feedback" name="feedback" class="form-control"/>
+                  <button onclick="successMsg()"  class="btn">Submit</button>
+                </form>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+     function successMsg(){       
+            let feedback = document.getElementById("feedback").value;
+            if (feedback == "") {
+              alert("Cannot be empty");
+              return false;
+            }                       
+          }
+         
+    </script>
+  </Body>
+</html>

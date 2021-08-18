@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<Head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <Title>School Of Calisthenics</Title>
+  <link rel="stylesheet" type="text/css" href="Css/registration.css" />
+</Head>
+<body onload="onLoadFn()"> 
+  <nav>
+    <ul>
+      <li>
+        <a href="home.html"> HOME </a>
+      </li>
+      <li>
+        <a href="Coaching.html">COACHING </a>
+      </li>
+      <li><a href="#about"> CONTACT US </a></li>
+      <li>
+        <a href="#reg">REGISTRATION</a>
+      </li>
+    </ul>
+  </nav>
+  <div id="reg">
+    <h1 style="text-align: center; margin-top: 150px;">
+      Calisthenics Registration Form
+    </h1>
+    <p style="text-align: center">
+      Want to become a Calisthenics member? Fill in the form below and we will
+      contact you shortly to complete your registration process.
+    </p>
+    <div class="container">
+      <form name="myForm" action="submitmsg.html" onsubmit="return validateForm()" method="post">
+        <label for="fname">Full Name</label>
+        <span class="errorCss">*</span>
+        <br/>
+        <label id="fnameError" class="errorCss"  style="display:none;">Enter Full Name</label>
+        <input type="text" id="fname" name="fname" placeholder="Your name.." />
+        <label for="gender">Gender</label>
+        <span class="errorCss">*</span>
+        <label id="genderError" class="errorCss"  style="display:none;">Enter Gender</label>
+        <br />
+        <br />
+        <input type="radio" id="male" name="gender" value="male" /> Male
+        <br />
+        <br />
+        <input type="radio" id="female" name="gender" value="female" /> Female
+        <br />
+        <br />
+        <br />
+        <label for="c-weight">Your Current weight</label>
+        <input type="number" id="c-weight" name="c-weight" />
+        <label for="d-weight">Desired weight</label>
+        <input type="number" id="d-weight" name="d-weight" />
+        <label for="height">Height</label>
+        <input type="number" id="height" name="height" />
+        <label for="bmi">BMI</label>
+        <input type="number" id="bmi" name="bmi" />
+        <br><br>
+        <br>
+        <label for="address">HOME ADDRESS</label>
+        <span class="errorCss">*</span>
+        <br>
+        <label id="addError" class="errorCss"  style="display:none;">Enter your Address</label>
+        <input type="text" id="address" name="address"placeholder="Address"/> 
+          Select Country: <select name="state" id="countySel" size="1">
+          <option value="" selected="selected">Select Country</option>
+          </select>
+          <br>
+          <br>
+          Select State: <select name="countrya" id="stateSel" size="1">
+          <option value="" selected="selected">Please select Country first</option>
+          </select>
+          <br>
+          <br>
+          Select District: <select name="district" id="districtSel" size="1">
+          <option value="" selected="selected">Please select State first</option>
+          </select><br><br>
+        <label for="zip">Zip Code</label>
+        <span class="errorCss">*</span>
+        <label id="zipError" class="errorCss"  style="display:none;">Invalid Zip Code</label>
+        <input type="text" id="zip"  name="zip" placeholder="Zip" />
+        <label for="email">Email</label>
+        <span class="errorCss">*</span>
+        <label id="mailError" class="errorCss"  style="display:none;">Invalid Email Address</label>
+        <input type="text" id="email"  name="email" />
+        <label for="phone">Phone Number</label>
+        <span class="errorCss">*</span>
+        <label id="phoneError" class="errorCss"  style="display:none;">Invalid Phone Number</label>
+        <input type="text" id="phone" name="phone" />
+        <label for="trainer">Do you require a personal trainer?</label>
+        <span class="errorCss">*</span>
+        <label id="trainerError" class="errorCss"  style="display:none;">Enter Trainer</label><br />
+        <br />
+        <input type="radio" id="yes" name="trainer" value="YES" /> Yes <br />
+        <br />
+        <input type="radio" id="no" name="trainer" value="NO" /> No <br />
+        <br />
+        <br />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </div>
+  <hr>
+  <div id="about">
+    <div class="footer">
+      <div class="row">
+        <div class="columnFooter">
+          <div class="footer-contact">
+            <h2>Our Address</h2>
+            <p>📍 85 Street, Kerala, INDIA</p>
+            <p>☎ +91 92 345 67890</p>
+            <p>&#9993 info@Calisthenics.com</p>
+          </div>
+        </div>
+        <div class="columnFooter">
+          <div class="footer-link">
+            <h2>Quick Links</h2>
+            <a href="">&#9874 Privacy policy</a>
+            <a href="">&#9874 Cookies</a>
+            <a href="">&#9874 Help</a>
+            <a href="">&#9874 FQAs</a>
+          </div>
+        </div>
+        <div class="columnFooter">
+          <div class="footer-newsletter">
+            <h2>Newsletter</h2>
+            <p>
+              Send us your valuable feedback
+            </p>
+            <form name="myform" method="POST">
+              <input type="txt" id="feedback" name="feedback" class="form-control" />
+              <button onclick="successMsg()"  class="btn">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+        var stateObject = {
+        "India": { "Delhi": ["new Delhi", "North Delhi"],
+                    "Kerala": ["Thiruvananthapuram", "Palakkad"],
+                    "Goa": ["North Goa", "South Goa"],
+                  },
+        "Australia": {  "South Australia": ["Dunstan", "Mitchell"],
+                      "Victoria": ["Altona", "Euroa"]
+                  }, 
+        "Canada": {  "Alberta": ["Acadia", "Bighorn"],
+                    "Columbia": ["Washington", ""]
+                  },
+        }
+    window.onload = function () {
+        
+          var countySel = document.getElementById("countySel"),
+                          stateSel = document.getElementById("stateSel"),
+                          districtSel = document.getElementById("districtSel");
+          for (var country in stateObject) {
+               countySel.options[countySel.options.length] = new Option(country, country);
+          }
+    countySel.onchange = function () {
+          stateSel.length = 1; 
+          districtSel.length = 1; 
+          if (this.selectedIndex < 1) return;
+              for (var state in stateObject[this.value]) {
+                 stateSel.options[stateSel.options.length] = new Option(state, state);
+              }
+            }
+    countySel.onchange(); 
+          stateSel.onchange = function () {
+                 districtSel.length = 1; 
+                if (this.selectedIndex < 1) return; 
+                var district = stateObject[countySel.value][this.value];
+                for (var i = 0; i < district.length; i++) {
+                    districtSel.options[districtSel.options.length] = new Option(district[i], district[i]);
+                }
+          }
+    }
+      function successMsg() {       
+            let feedback = document.getElementById("feedback").value;
+            if (feedback == ""||feedback==Null) {
+              alert("Cannot be empty");
+              return false;
+            }
+          }
+        function validateForm() {
+          let fname = document.forms["myForm"]["fname"].value;
+          let gender = document.querySelector( 'input[name="gender"]:checked');   
+          let cWeight = document.forms["myForm"]["c-weight"].value;
+          let dWeight = document.forms["myForm"]["d-weight"].value;
+          let height = document.forms["myForm"]["height"].value;
+          let bmi = document.forms["myForm"]["bmi"].value;
+          let address = document.forms["myForm"]["address"].value;
+          let country = document.forms["myForm"]["countySel"].value;
+          let state = document.forms["myForm"]["stateSel"].value;
+          let district = document.forms["myForm"]["districtSel"].value;
+          let zip = document.forms["myForm"]["zip"].value; 
+          let phone = document.forms["myForm"]["phone"].value;
+          let email = document.forms["myForm"]["email"].value;
+          let trainer = document.querySelector( 'input[name="trainer"]:checked');   
+          var zipREGX=/^[0-9]{6}$/;
+          var phoneRGEX = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
+          var emailRGEX=/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+          var breturn=true;
+		      if (fname == "") {
+            document.getElementById("fname").style.border = "1px solid red";
+            document.getElementById("fnameError").style.display = "block";
+            breturn= false;
+          }else{
+            document.getElementById("fnameError").style.display="none";
+            document.getElementById("fname").style.border = "";
+          }
+          if (gender==null) {
+            document.getElementById("genderError").style.display = "block";
+            breturn= false;
+          }
+          else{
+            document.getElementById("genderError").style.display="none";
+          }
+          if (cWeight=="") {
+            document.getElementById("c-weight").style.border = "1px solid red";
+            breturn= false;
+          }
+          else{
+            document.getElementById("c-weight").style.border = "";
+          }
+          if (dWeight=="") {
+            document.getElementById("d-weight").style.border = "1px solid red";
+            breturn= false;
+          }
+          else{
+            document.getElementById("d-weight").style.border = "";
+          }
+          if (height=="") {
+            document.getElementById("height").style.border = "1px solid red";
+            breturn= false;
+          }
+          else{
+            document.getElementById("height").style.border = "";
+          }
+          if (bmi=="") {
+            document.getElementById("bmi").style.border = "1px solid red";
+            breturn= false;
+          }
+          else{
+            document.getElementById("bmi").style.border = "";
+          }
+          if (address == "") {
+            document.getElementById("address").style.border = "1px solid red";
+            document.getElementById("addError").style.display = "block";
+            breturn= false;
+          }
+          else{
+            document.getElementById("address").style.border = "";
+            document.getElementById("addError").style.display = "none";
+          }
+          if (country=="") {
+            document.getElementById("countySel").style.border = "1px solid red";
+            breturn= false;
+          }
+          else{
+            document.getElementById("countySel").style.border = "";
+          }
+          if (state=="") {
+            document.getElementById("stateSel").style.border = "1px solid red";
+            breturn= false;
+          }
+          else{
+            document.getElementById("stateSel").style.border = "";
+          }
+          if (district=="") {
+            document.getElementById("districtSel").style.border = "1px solid red";
+            breturn= false;
+          }
+          else{
+            document.getElementById("districtSel").style.border = "";
+          }
+          if (zip=="") {
+            document.getElementById("zip").style.border = "1px solid red";
+            breturn= false;
+          }
+          else{
+            document.getElementById("zip").style.border = "";
+          } 
+          var zipResult = zipREGX.test(zip);
+          if (zipResult==false){
+            document.getElementById("zipError").style.display = "block";
+            breturn= false;
+          }
+          else{
+            document.getElementById("zipError").style.display="none";
+          }
+          if (phone=="") {
+            document.getElementById("phone").style.border = "1px solid red";
+            breturn= false;
+          }
+          else{
+            document.getElementById("phone").style.border = "";
+          } 
+          var phoneResult = phoneRGEX.test(phone);
+          if (phoneResult==false){
+            document.getElementById("phoneError").style.display = "block";
+            breturn= false;
+          }
+          else{
+            document.getElementById("phoneError").style.display="none";
+          }
+          
+          if (email=="") {
+            document.getElementById("email").style.border = "1px solid red";
+            breturn= false;
+          }
+          else{
+            document.getElementById("email").style.border = "";
+          } 
+          var emailResult = emailRGEX.test(email);
+          if (emailResult==false){
+            document.getElementById("mailError").style.display = "block";
+            breturn= false;
+          }
+          else{
+            document.getElementById("mailError").style.display="none";
+          }
+          if (trainer==null) {
+            document.getElementById("trainerError").style.display = "block";
+            breturn= false;
+          }
+          else{
+            document.getElementById("trainerError").style.display="none";
+          }
+          if(breturn==false){
+          return false;
+          }
+		      return true;
+         
+        }
+  </script>
+</body>
+
+</html>

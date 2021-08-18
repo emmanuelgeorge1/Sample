@@ -1,0 +1,155 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: #454545;
+  font-family: "Nunito", sans-serif;
+}
+
+a {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  color: #faf8f4;
+  transition: 0.3s;
+}
+
+nav {
+  background-color: black;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 8px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 25px 0 black;
+}
+nav * {
+  display: inline;
+}
+nav li {
+  margin: 30px;
+}
+* {
+  box-sizing: border-box;
+}
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 400px;
+}
+.columnFooter {
+  float: left;
+  width: 33.33333%;
+  padding: 10px;
+  height: 300px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.responsive {
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 7 5%;
+}
+.container {
+  padding-right: 40px;
+  padding-left: 40px;
+  margin: 100px;
+}
+.footer {
+  position: relative;
+  margin-top: 50px;
+}
+video {
+  background-color: black;
+  padding: 30px;
+  width: 100%;
+}
+
+.footer .footer-contact,
+.footer .footer-link,
+.footer .footer-newsletter {
+  position: relative;
+  margin-bottom: 50px;
+  margin-left: 80px;
+  margin-right: 40px;
+  color: #17171a;
+}
+
+.footer .footer-contact h2,
+.footer .footer-link h2,
+.footer .footer-newsletter h2 {
+  position: relative;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #17171a;
+}
+
+.footer .footer-contact h2::after,
+.footer .footer-link h2::after,
+.footer .footer-newsletter h2::after {
+  position: absolute;
+  content: "";
+  width: 45px;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: teal;
+}
+
+.footer .footer-link a {
+  display: block;
+  margin-bottom: 10px;
+  color: #454545;
+  transition: 0.3s;
+}
+
+.footer .footer-link a::before {
+  position: relative;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 10px;
+  color: black;
+}
+
+.footer .footer-link a:hover {
+  color: black;
+  letter-spacing: 1px;
+}
+
+.footer .footer-contact p i {
+  width: 25px;
+  color: black;
+}
+
+.footer .footer-newsletter input {
+  height: 30px;
+  background: transparent;
+  border: 1px solid #17171a;
+  border-radius: 5px;
+}
+
+.footer .footer-newsletter .btn {
+  background-color: #17171a;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
